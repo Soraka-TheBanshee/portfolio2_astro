@@ -1,0 +1,110 @@
+.mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-mask-size: 100% 80%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left top, left bottom;
+
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-size: 100% 80%;
+  mask-repeat: no-repeat;
+  mask-position: left top, left bottom;
+}
+
+.mask:hover {
+  animation-duration: 0.5s;
+  animation-name: mask-anim-hover-pc;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mask-anim-hover-pc {
+  from {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-size: 100% 80%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 80%;
+    mask-repeat: no-repeat;
+    mask-position: left top, left bottom;
+  }
+
+  to {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+.remove-mask {
+  animation-duration: 5.3s;
+  animation-name: remove-mask-anim-mobile;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .remove-mask {
+    animation-name: remove-mask-anim-pc;
+  }
+}
+
+@media only screen and (min-width: 1091px) {
+    .remove-mask, .mask {
+      overflow: visible;
+    }
+  }
+
+@keyframes remove-mask-anim-pc {
+  0% {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: left top, left bottom;
+  }
+
+  100% {
+    -webkit-mask-size: 100% 5000%;
+    mask-size: 100% 5000%;
+    /* overflow: none; */
+  }
+}
+
+@keyframes remove-mask-anim-mobile {
+  0% {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-size: 100% 80%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 80%;
+    mask-repeat: no-repeat;
+    mask-position: left top, left bottom;
+  }
+
+  100% {
+    -webkit-mask-size: 100% 5000%;
+    mask-size: 100% 5000%;
+  }
+}

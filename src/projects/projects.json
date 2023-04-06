@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "My first ever project",
+      "img": "/img1.jpg",
+      "href": "#",
+      "description": "THis is am aswom project trust!",
+      "techs": ["Java Script", "Astro"]
+    },
+    {
+      "id": "2",
+      "title": "My second ever project",
+      "img": "/img2.png",
+      "href": "#",
+      "description": "THis is surely an aswom project trust!!!!",
+      "techs": ["Java Script", "React"]
+    },
+    {
+      "id": "3",
+      "title": "My second ever project",
+      "img": "/img2.png",
+      "href": "#",
+      "description": "THis is surely an aswom project trust!!!!",
+      "techs": ["Java Script"]
+    },
+    {
+      "id": "4",
+      "title": "My second ever project",
+      "img": "/img2.png",
+      "href": "#",
+      "description": "THis is surely an aswom project trust!!!!",
+      "techs": ["Java Script"]
+    },
+    {
+      "id": "5",
+      "title": "My second ever project",
+      "img": "/img2.png",
+      "href": "#",
+      "description": "THis is surely an aswom project trust!!!!",
+      "techs": ["Java Script"]
+    }
+  ]
+}

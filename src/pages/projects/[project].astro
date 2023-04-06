@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../projects/projects.json"
+
+
+
+export function getStaticPaths() {
+  const paths = projects.map(project => ({params: {project: `project${project.id}`}}))
+  return [
+    paths
+  ];
+}
+
+const { project } = Astro.params;
+const match = project?.match(/\d+/)
+console.log(match);
+
+const projectId = match&&match[0]
+const thisProject = projects.find(project => projectId === project.id)
+---
+<Layout title={project?project:"sad no titile"}>
+    <div>Good project, {project}!</div>
+    <p>{thisProject?.description}</p>
+    <div class=" overflow-hidden "><img class="object-cover w-full h-full" src={thisProject?.img} alt="an cool pic is here"></div>
+</Layout>
